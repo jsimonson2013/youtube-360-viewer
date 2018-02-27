@@ -1,0 +1,88 @@
+# Youtube gaze extension
+
+A browser extension for YouTube that will detect spherical videos and offer the user the ability to use their gaze to interact with 360 content.
+
+We can detect a 360 video because the format ends in `s`.
+
+### First step
+A low hanging fruit is to create a target that covers the video player for gaze input. Movement on the target can be translated to the video and non-360 videos will do nothing when interacted with.
+
+### Sample debug video output
+Right-clicking on the video player and selecting *Copy Debug Info* for [this video](https://www.youtube.com/watch?v=H6SsB3JYqQg) outputs:
+```
+{
+  "ns": "yt",
+  "el": "detailpage",
+  "cpn": "8pcemUnUuR1hSr03",
+  "docid": "H6SsB3JYqQg",
+  "ver": 2,
+  "cmt": "1.917",
+  "plid": "AAVmJgfbhFjKQgn_",
+  "ei": "2ZqUWvb6JbHc-APTyZugBg",
+  "fmt": "248",
+  "fs": "0",
+  "rt": "3.477",
+  "of": "HJMOX7wuJLfpe-6M6wipOQ",
+  "euri": "",
+  "lact": 1,
+  "cl": "186979590",
+  "mos": 0,
+  "state": "8",
+  "vm": "CAEQARgE",
+  "volume": 95,
+  "c": "WEB",
+  "cver": "2.20180224",
+  "cplayer": "UNIPLAYER",
+  "cbr": "Firefox",
+  "cbrver": "58.0",
+  "cos": "Windows",
+  "cosver": "10.0",
+  "hl": "en_US",
+  "cr": "US",
+  "len": "492.161",
+  "fexp": "23708159,23708904,23708906,23708910,23709798,23710476,23713264,23713711,23716999,23717456,23719518,23719525,23719589,23720867,23721898,23722714,23723618,23725111,23725544,23726685,23726692,23727124,23727699,9405985,9422596,9431754,9441148,9449243,9471239,9485000,9486080",
+  "afmt": "251",
+  "vct": "1.917",
+  "vd": "492.161",
+  "vpl": "0.000-1.917,",
+  "vbu": "0.000-5.181,",
+  "vpa": "false",
+  "vsk": "false",
+  "ven": "false",
+  "vpr": "1",
+  "vrs": "3",
+  "vns": "2",
+  "vec": "null",
+  "vvol": "0.6028004871393701",
+  "creationTime": 4378.9400000000005,
+  "totalVideoFrames": 63,
+  "droppedVideoFrames": 0,
+  "corruptedVideoFrames": 0,
+  "lct": "1.917",
+  "lsk": false,
+  "lmf": false,
+  "lbw": "1159209.688",
+  "lhd": "0.212",
+  "lst": "102.435",
+  "laa": "itag=251,seg=0,range=1119-66654,time=0.0-5.4,off=0,len=65536",
+  "lva": "itag=248,seg=1,range=1578131-3201929,time=5.8-10.7,off=148544,len=1623799,end=1",
+  "lar": "itag=251,seg=1,range=123276-243022,time=10.0-20.0,off=0,len=119747",
+  "lvr": "itag=248,seg=2,range=3201930-5034655,time=10.7-16.0,off=0,len=1832726,end=1",
+  "lvh": "r13---sn-bvvbax-2ime",
+  "lab": "0.000-5.181,",
+  "lvb": "0.000-10.676,",
+  "ismb": 11380000,
+  "relative_loudness": "3.951",
+  "optimal_format": "1080s",
+  "user_qual": "auto",
+  "debug_videoId": "H6SsB3JYqQg",
+  "0sz": false,
+  "op": "1",
+  "yof": false,
+  "dis": "none",
+  "gpu": "ANGLE_(Intel(R)_HD_Graphics_630_Direct3D11_vs_5_0_ps_5_0)",
+  "cgr": true,
+  "debug_playbackQuality": "hd1080",
+  "debug_date": "Mon Feb 26 2018 16:40:12 GMT-0700 (US Mountain Standard Time)"
+}
+```
