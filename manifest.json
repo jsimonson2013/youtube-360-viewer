@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "YouTube 360 Gaze",
+  "version": "0.0.1",
+
+  "description": "Gaze tracking input for YouTube.",
+
+  "browser_action": {
+    "default_icon": "path/to/icon.png",
+    "default_popup": "path/to/popup.html",
+    "default_title": "Uses gaze tracking to pan video input.",
+  },
+
+  "background": {
+    "scripts": [
+      "path/to/background_script.js"
+    ],
+    "persistent": false
+  },
+  "short_name": "YT Gaze"
+}
