@@ -6,14 +6,14 @@
   "description": "Gaze tracking input for YouTube.",
 
   "browser_action": {
-    "default_icon": "path/to/icon.png",
-    "default_popup": "path/to/popup.html",
-    "default_title": "Uses gaze tracking to pan video input.",
+    "default_icon": "./icons/icon.png",
+    "default_popup": "./popup.html",
+    "default_title": "Uses gaze tracking to pan video input."
   },
 
   "background": {
     "scripts": [
-      "path/to/background_script.js"
+      "./scripts/background_script.js"
     ],
     "persistent": false
   },
