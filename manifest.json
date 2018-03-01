@@ -11,6 +11,8 @@
     "default_title": "Uses gaze tracking to pan video input."
   },
 
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';",
+
   "background": {
     "scripts": [
       "./scripts/background_script.js"
