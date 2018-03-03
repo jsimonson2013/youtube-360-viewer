@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 	document.getElementById('activate').addEventListener('click', () => {
-		alert('Activated!')
+		initializeGazeTracking()
 	})
 	document.getElementById('deactivate').addEventListener('click', () => {
 		alert('Deactivated!')
